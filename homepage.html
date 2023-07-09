@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Travel is life</title>
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Adventure</a>
+    <div class="navigation">
+      <div class="menu-button"></div>
+      <div class="nav-items">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Explore</a>
+        <a href="">Gallery</a>
+        <a href="">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="home">
+    <video class="video-slide" src="./videos/hiking.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="./videos/jungle.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="./videos/mountain.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="./videos/video.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="./videos/video1.mp4" autoplay muted loop></video>
+    <div class="content active">
+      <h1>
+        Adventures are the best way to learn <span>Hiking master</span>
+      </h1>
+      <p>
+        Don’t let your anchor hold you down forever. Eventually you’ll have to
+        sail to a new adventure
+      </p>
+      <a href="">Read more</a>
+
+    </div>
+    <div class="content">
+      <h1>
+        Adventures are the best way to learn <span>Feel Fresh</span>
+      </h1>
+      <p>
+        Don’t let your anchor hold you down forever. Eventually you’ll have to
+        sail to a new adventure
+      </p>
+      <a href="">Read more</a>
+
+    </div>
+    <div class="content">
+      <h1>
+        Adventures are the best way to learn <span>Mountain Peak</span>
+      </h1>
+      <p>
+        Don’t let your anchor hold you down forever. Eventually you’ll have to
+        sail to a new adventure
+      </p>
+      <a href="">Read more</a>
+
+    </div>
+    <div class="content">
+      <h1>
+        Adventures are the best way to learn <span>Get Out and Travel man</span>
+      </h1>
+      <p>
+        Don’t let your anchor hold you down forever. Eventually you’ll have to
+        sail to a new adventure
+      </p>
+      <a href="">Read more</a>
+
+    </div>
+    <div class="content">
+      <h1>
+        Adventures are the best way to learn <span>Travel Therapy</span>
+      </h1>
+      <p>
+        Don’t let your anchor hold you down forever. Eventually you’ll have to
+        sail to a new adventure
+      </p>
+      <a href="">Read more</a>
+
+    </div>
+    <div class="slider-animation">
+      <div class="nav-btn"> </div>
+      <div class="nav-btn"> </div>
+      <div class="nav-btn"> </div>
+      <div class="nav-btn"> </div>
+    </div>
+  </section>
+
+  <script>
+
+    const btns = document.querySelectorAll('.nav-btn');
+    const slides = document.querySelectorAll('.video-slide');
+    const content = document.querySelectorAll('.content');
+
+    var slidernav = function (manual) {
+      btns.forEach((btn) => {
+        btn.classList.remove('active');
+      });
+
+      slides.forEach((slides) => {
+        slides.classList.remove('active');
+      });
+      content.forEach((content) => {
+        content.classList.remove('active');
+      });
+
+      btns[manual].classList.add('active');
+      slides[manual].classList.add('active');
+      content[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        slidernav(i);
+      });
+    });
+  </script>
+</body>
+
+</html>
